@@ -1,0 +1,5 @@
+[info]
+title=Linter for JavaScript, using JSHint
+desc=Linter for CudaLint, adds support for JavaScript lexer, using JSHint, requires Node.js
+type=cudatext-plugin
+subdir=cuda_lint_jshint
