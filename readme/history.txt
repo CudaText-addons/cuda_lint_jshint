@@ -1,4 +1,8 @@
 
+2022.10.08
++ updated Node package
++ add: reused cudax_nodejs module
+
 2019.06.20
 + updated Node package
 

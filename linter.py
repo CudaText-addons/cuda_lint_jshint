@@ -6,8 +6,8 @@
 import os
 import re
 from cuda_lint import Linter, util
+from cudax_nodejs import NODE_FILE
 
-_node = 'node' if os.name=='nt' else 'nodejs'
 _js = os.path.join(os.path.dirname(__file__), 'node_modules', 'jshint', 'bin', 'jshint')
 
 
@@ -15,7 +15,7 @@ class JSHint(Linter):
     """Provides an interface to the jshint executable."""
 
     syntax = ('JavaScript', 'HTML')
-    executable = _node
+    executable = NODE_FILE
     version_args = '--version'
     version_re = r'\bv(?P<version>\d+\.\d+\.\d+)'
     version_requirement = '>= 2.5.0'
@@ -46,7 +46,7 @@ class JSHint(Linter):
 
     def cmd(self):
         """Return the command line to execute."""
-        command = [util.which(_node), _js, '--verbose', '--filename', '@']
+        command = [NODE_FILE, _js, '--verbose', '--filename', '@']
 
         if self.syntax == 'HTML':
             command.append('--extract=always')
