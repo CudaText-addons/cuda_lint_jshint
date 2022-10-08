@@ -1,7 +1,7 @@
 Plugin for CudaLint.
 Supports JavaScript lexer, using JSHint.
 Requires Node.js in PATH.
-JSHint is included in this package, it's installed via
+You must install JSHint locally in the linter's folder "(CudaText)/py/cuda_lint_jshint":
 
 $ npm install jshint
 

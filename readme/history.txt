@@ -1,6 +1,6 @@
 
 2022.10.08
-+ updated Node package
+* change: removed Node package (5 Mbytes), now user must install it, see readme.txt
 + add: reused cudax_nodejs module
 
 2019.06.20
